@@ -12,9 +12,6 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "dependencies": {
     "@types/color-name": "^1.1.1",
     "cli-table": "^0.3.1",
