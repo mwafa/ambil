@@ -2,7 +2,7 @@
 const app = require("yargs")
 const Table = require("cli-table")
 const fs = require("fs")
-// const fetch = require("node-fetch")
+const fetch = require("node-fetch")
 
 const db = require("./db")
 const { BASE_URL } = require("./constant")
