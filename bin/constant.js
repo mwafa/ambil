@@ -1,3 +1,3 @@
 module.exports = {
-  BASE_URL: "https://mwafa.github.io/ambil-cli/",
+  BASE_URL: "https://mwafa.github.io/ambil-cli/configs/",
 }
