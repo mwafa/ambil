@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 const app = require("yargs")
-const db = require("./db")
 const Table = require("cli-table")
+const fs = require("fs")
+const fetch = require("node-fetch")
+
+const db = require("./db")
+const { BASE_URL } = require("./constant")
 
 app
   .scriptName("ambil")
@@ -24,6 +28,12 @@ app
         console.log(`Downloading ${file_data.filename}`)
         // TO DO
         // Download files..
+        const url = BASE_URL + file_data.url
+        fetch(url)
+          .then((r) => r.text())
+          .then((data) => {
+            fs.writeFileSync(file_data.filename, data)
+          })
       }
     }
   )
