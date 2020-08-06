@@ -1,6 +1,6 @@
 {
   "name": "ambil-cli",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "CLI Application to download default config file",
   "main": "./bin/index.js",
   "bin": {

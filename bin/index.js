@@ -2,7 +2,7 @@
 const app = require("yargs")
 const Table = require("cli-table")
 const fs = require("fs")
-const fetch = require("node-fetch")
+// const fetch = require("node-fetch")
 
 const db = require("./db")
 const { BASE_URL } = require("./constant")
@@ -33,6 +33,10 @@ app
           .then((r) => r.text())
           .then((data) => {
             fs.writeFileSync(file_data.filename, data)
+          })
+          .catch((e) => {
+            console.error("Download Error!!!")
+            console.error(e)
           })
       }
     }
