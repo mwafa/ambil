@@ -2,6 +2,12 @@
 
 CLI Application to download default config file
 
+## Install
+
+```shell
+npm install -g ambil-cli
+```
+
 ## Help
 
 ```shell
