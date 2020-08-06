@@ -34,6 +34,10 @@ app
           .then((data) => {
             fs.writeFileSync(file_data.filename, data)
           })
+          .catch((e) => {
+            console.error("Download Error!!!")
+            console.error(e)
+          })
       }
     }
   )

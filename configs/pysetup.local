@@ -1,0 +1,36 @@
+[metadata]
+name = lib-name-here
+version = 1.0.0
+author = Your Name
+author-email = example@email.com
+home-page = https://github.com/USERNAME/REPO_NAME
+description = Description here.
+long-description = file: README.md
+long_description_content_type = text/markdown
+license = MIT
+platform = any
+keywords = Python, any
+classifiers =
+    Programming Language :: Python
+
+[options]
+zip_safe = false
+python_requires = >= 3.5.*
+setup_requires =
+    setuptools
+    wheel
+install_requires = 
+    numpy
+
+[check]
+metadata = true
+restructuredtext = false
+strict = true
+
+[flake8]
+ignore = E111, E501, E722
+exclued = book
+
+[yapf]
+based_on_style = pep8
+indent_width = 2
