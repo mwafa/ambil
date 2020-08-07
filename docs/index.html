@@ -3,59 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ambil-CLI</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish&family=Raleway&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        font-family: 'Mulish', sans-serif;
-      }
-      body {
-        background-image: linear-gradient(turquoise, teal);
-      }
-      .container {
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .container h2 {
-        transition: ease-out;
-        font-weight: 900;
-        transition-duration: 0.2s;
-        font-size: 40px;
-        color: white;
-        text-shadow: 0px 0px 5px white;
-      }
-      .container h2:hover {
-        scale: 1.2;
-        translate: 0px -10px;
-      }
-      .container a {
-        font-family: 'Raleway';
-        text-decoration: none;
-        color: white;
-        background-color: teal;
-        padding: 20px 50px;
-        border-radius: 500px;
-        transition: ease-out;
-        transition-duration: 0.2s;
-        box-shadow: 5px 10px 10px #00000024;
-      }
-      .container a:hover {
-        transform: scale(1.1);
-        translate: 0px 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css?edited=20200807" />
   </head>
   <body>
+    <!-- hero -->
+    <div class="hero">
+      <h2 class="hero-title">ambil-cli</h2>
+      <div class="sub-title">
+        CLI Application to download default config file
+      </div>
+      <a class="hero-button" href="https://github.com/mwafa/ambil-cli">
+        Go To Github Repository
+      </a>
+    </div>
+
+    <!-- content -->
     <div class="container">
-      <h2>Under Construction</h2>
-      <a href="https://github.com/mwafa/ambil-cli">Go To Github Repository</a>
+      <h1 id="ambil-cli">Ambil CLI</h1>
+      <p>CLI Application to download default config file</p>
+      <h2 id="install">Install</h2>
+      <pre><code class="lang-shell">npm install -g ambil-<span class="hljs-keyword">cli</span>
+</code></pre>
+      <h2 id="help">Help</h2>
+      <pre><code class="lang-shell">ambil <span class="hljs-comment">--help</span>
+</code></pre>
+      <pre><code>ambil <span class="hljs-symbol">&lt;cmd&gt;</span> [<span class="hljs-keyword">args</span>]
+
+Command<span class="hljs-variable">s:</span>
+  ambil <span class="hljs-built_in">get</span> [name]  Get config <span class="hljs-keyword">file</span>
+  ambil <span class="hljs-keyword">list</span>        Show <span class="hljs-keyword">all</span> config <span class="hljs-keyword">list</span>
+
+Option<span class="hljs-variable">s:</span>
+  --<span class="hljs-keyword">version</span>  Show <span class="hljs-keyword">version</span> <span class="hljs-keyword">number</span>  [boolean]
+  --<span class="hljs-keyword">help</span>     Show <span class="hljs-keyword">help</span>            [boolean]
+</code></pre>
+      <h2 id="basic-usage">Basic Usage</h2>
+      <h3 id="show-all-configs">Show all configs</h3>
+      <pre><code class="lang-shell">ambil <span class="hljs-built_in">list</span>
+</code></pre>
+      <pre><code>┌───────────┬───────────────┐
+│ Name      │ Filename      │
+├───────────┼───────────────┤
+│ gitignore │ <span class="hljs-selector-class">.gitignore</span>    │
+├───────────┼───────────────┤
+│ tsconfig  │ tsconfig<span class="hljs-selector-class">.json</span> │
+├───────────┼───────────────┤
+│ gitkeep   │ <span class="hljs-selector-class">.gitkeep</span>      │
+├───────────┼───────────────┤
+│ prettier  │ <span class="hljs-selector-class">.prettierrc</span>   │
+├───────────┼───────────────┤
+│ pysetup   │ setup<span class="hljs-selector-class">.cfg</span>     │
+└───────────┴───────────────┘
+</code></pre>
+      <h3 id="download">Download</h3>
+      <p>Example download <code>tsconfig.json</code></p>
+      <pre><code class="lang-shell">ambil <span class="hljs-keyword">get</span> tsconfig
+</code></pre>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      Powered by Github Pages
     </div>
   </body>
 </html>
